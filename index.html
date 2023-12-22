@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="./style.css">
+    <title> Team Tudzz</title>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <div class="imgBx" style="--i:2;" data-id="content2">
+                <img src="jana.jpg" alt="">
+            </div>
+            <div class="imgBx" style="--i:4;" data-id="content4">
+                <img src="joel.jpg" alt="">
+            </div>
+            <div class="imgBx" style="--i:6;" data-id="content6">
+                <img src="sai.jpg" alt="">
+            </div>
+            <div class="imgBx" style="--i:8;" data-id="content8">
+                <img src="saaru.jpg" alt="">
+            </div>
+        </div>
+        <div class="content">
+
+            <div class="contentBx" id="content2">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="jana.jpg" alt="">
+                    </div>
+                    <div class="textBx">
+                        <h2>Janakiraman<br><span>Full Stack Developer</span></h2>
+                        <ul class="sci">
+                            <li><a href="https://www.instagram.com/techie_jr/"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="contentBx" id="content4">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="joel.jpg" alt="">
+                    </div>
+                    <div class="textBx">
+                        <h2>Joel<br><span>Front-end Developer</span></h2>
+                        <ul class="sci">
+                            <li><a href="https://www.instagram.com/jazzy_joel10/"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="contentBx" id="content6">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="sai.jpg" alt="">
+                    </div>
+                    <div class="textBx">
+                        <h2>Sai Krishna<br><span>FUll Stack Developer</span></h2>
+                        <ul class="sci">
+                            <li><a href="https://www.instagram.com/saikrisshnamkloyolite/"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="contentBx" id="content8">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="saaru.jpg" alt="">
+                    </div>
+                    <div class="textBx">
+                        <h2>Saarangan <br><span>UI & UX Designer
+                        </span></h2>
+                        <ul class="sci">
+                            <li><a href="https://www.instagram.com/s_p_95_/"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script>
+        let imgBx = document.querySelectorAll('.imgBx')
+        let contentBx = document.querySelectorAll('.contentBx')
+
+        for(let i=0; i < imgBx.length; i++){
+            imgBx[i].addEventListener('mouseover', function(){
+                for(let i=0; i<contentBx.length; i++){
+                    contentBx[i].className = 'contentBx';
+                }
+                document.getElementById(this.dataset.id).className = 'contentBx active';
+
+
+                for(let i=0; i<imgBx.length; i++){
+                    imgBx[i].className = 'imgBx';
+                }
+                this.className = 'imgBx active';
+            })
+        }
+    </script>
+</body>
+</html>
